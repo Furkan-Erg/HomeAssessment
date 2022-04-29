@@ -7,6 +7,7 @@
   width: 100%;
 }
 .main {
+  padding-top: 10%;
   grid-area: main;
   background-color: rgb(231, 166, 166);
   text-align: center;
