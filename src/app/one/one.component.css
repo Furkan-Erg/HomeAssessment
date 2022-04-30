@@ -6,7 +6,6 @@
   height: 100%;
 }
 .fheader {
-  padding-top: 10%;
   flex-direction: row;
   background-color: rgba(243, 233, 147, 0.979);
   text-align: center;
@@ -15,6 +14,7 @@
   width: 100%;
 }
 .fmain {
+  padding-top: 10%;
   background-color: rgb(231, 166, 166);
   text-align: center;
 }
