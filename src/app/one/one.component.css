@@ -4,6 +4,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
+  
 }
 .fheader {
   flex-direction: row;
@@ -12,16 +13,18 @@
   position: fixed;
   top: 0;
   width: 100%;
+  border: solid black 4px;
 }
 .fmain {
   padding-top: 8.8%;
   background-color: rgb(231, 166, 166);
   text-align: center;
+  border: solid black 4px;
 }
 .fsidebar {
   background-color: rgba(163, 226, 245, 0.952);
   text-align: center;
-
+  border: solid black 4px;
   width: 130px;
 }
 .ffooter {
@@ -31,6 +34,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  border: solid black 4px;
 }
 .fbody {
   flex-direction: row;

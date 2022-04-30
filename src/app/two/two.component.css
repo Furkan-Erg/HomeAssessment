@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  border: solid black 4px;
 }
 .main {
   padding-top: 10%;
@@ -13,6 +14,7 @@
   text-align: center;
   width: 100%;
   height: 100%;
+  border: solid black 4px;
 }
 .sidebar {
   grid-area: right;
@@ -20,6 +22,7 @@
   text-align: center;
   width: 100%;
   height: 110%;
+  border: solid black 4px;
 }
 .footer {
   grid-area: footer;
@@ -28,12 +31,14 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  border: solid black 4px;
 }
 .body {
   grid-area: body;
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
+  
 }
 .grid-container {
   display: grid;
@@ -43,4 +48,5 @@
     "footer footer footer footer footer footer footer footer";
   width: 100%;
   height: 100%;
+  
 }
