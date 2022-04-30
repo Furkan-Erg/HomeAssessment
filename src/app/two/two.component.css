@@ -44,7 +44,7 @@
   display: grid;
   grid-template-areas:
     "header header header header header header header header"
-    "main main main  main main main main right "
+    "main main main  main main main main right"
     "footer footer footer footer footer footer footer footer";
   width: 100%;
   height: 100%;

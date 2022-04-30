@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { TwoComponent } from 'src/app/two/two.component';
 
 @Component({
   selector: 'app-body',
@@ -8,7 +9,6 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit {
-
   nextpage: string = '';
   Form = this.fb.group({
     First: ['', Validators.required],
@@ -21,6 +21,8 @@ export class BodyComponent implements OnInit {
   ngOnInit(): void {
     this.checkpage();
   }
+  toggle = true;
+  status = 'Enable';
 
   checkpage() {
     if (document.URL.includes('two')) {
@@ -33,4 +35,6 @@ export class BodyComponent implements OnInit {
   resetForm() {
     this.Form.reset();
   }
+  //change color of footercomponent when user clicks on the button
+  changecolor(color: string) {}
 }

@@ -154,29 +154,30 @@ input {
 }
 
 .resetbtn {
+  display: inline-block;
   background-color: #4caf50;
   color: white;
-  padding: 14px 10px;
-  margin: 8px 5px;
+  padding: 15px 24px;
+  margin: 10px 10px;
+  box-sizing: border-box;
   border: 2px solid black;
+  text-align: center;
   cursor: pointer;
-  width: 20%;
 }
 .submitbtn {
+  display: inline-block;
   background-color: #4caf50;
   color: white;
-  padding: 14px 10px;
-  margin: 8px 5px;
+  padding: 15px 20px;
+  margin: 10px 10px;
+  box-sizing: border-box;
   border: 2px solid black;
+  text-align: center;
   cursor: pointer;
-  width: 20%;
 }
-
 .submitbtn:disabled {
   background-color: #96af97;
   color: white;
-  padding: 14px 10px;
-  margin: 8px 5px;
   border: 2px solid black;
   cursor: not-allowed;
 }
@@ -184,8 +185,6 @@ input {
 .resetbtn:disabled {
   background-color: #96af97;
   color: white;
-  padding: 14px 10px;
-  margin: 8px 5px;
   border: 2px solid black;
   cursor: not-allowed;
 }
