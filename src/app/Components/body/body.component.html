@@ -19,43 +19,39 @@
     <form [formGroup]="Form" novalidate>
       <h2>TITLE</h2>
       <p>
-        <label for="First"> </label>
-        <input type="text" formControlName="First" />
+        <input type="text" formControlName="First" required />
       </p>
 
       <p>
-        <label for="second"> </label>
-        <input type="text" formControlName="second" />
+        <input type="text" formControlName="Second" required />
       </p>
 
       <p>
-        <label for="third"> </label>
-        <input type="text" formControlName="third" />
+        <input type="text" formControlName="Third" required />
       </p>
 
       <p>
-        <label for="last"> </label>
-        <input type="text" formControlName="last" />
+        <input type="text" formControlName="Last" required />
       </p>
-
       <button
-        type="submit"
+        type="button"
         formControlName="reset"
-        value="RESET BUTTON"
         style="background-color: aqua"
+        (click)="resetForm()"
       >
         RESET BUTTON
       </button>
 
       <button
         type="button"
-        [disabled]="Form.invalid"
         formControlName="submit"
-        value="SUBMIT BUTTON"
         style="background-color: aqua"
+        routerLink="/{{ nextpage }}"
       >
         SUBMIT BUTTON
       </button>
     </form>
   </div>
 </div>
+
+<!--button that resets the form-->
