@@ -14,16 +14,15 @@
   width: 100%;
 }
 .fmain {
-  padding-top: 10%;
+  padding-top: 8.8%;
   background-color: rgb(231, 166, 166);
   text-align: center;
 }
 .fsidebar {
   background-color: rgba(163, 226, 245, 0.952);
   text-align: center;
-  
-  
-  
+
+  width: 130px;
 }
 .ffooter {
   flex-direction: row;

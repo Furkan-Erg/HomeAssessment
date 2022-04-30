@@ -2,6 +2,28 @@
   width: 200px; /* Set a width if you like */
 }
 
+input {
+  background-color: #ffffff;
+  color: black;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin: 12px 5px;
+  border: 2px solid black;
+  cursor: text;
+}
+
+.formtitle {
+  background-color: #1a0be4;
+  color: white;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  margin: 12px 5px;
+  border: 2px solid black;
+  font-size: 30px;
+}
+
 .vertical-menu a {
   display: block;
   padding: 14px;
@@ -15,8 +37,6 @@
 
 .form {
   grid-area: form;
-  width: 100%;
-  height: 100%;
 }
 .menu {
   grid-area: menu;
@@ -168,4 +188,11 @@
   margin: 8px 5px;
   border: 2px solid black;
   cursor: not-allowed;
+}
+
+.submitbtn:hover {
+  background-color: #a8d876;
+}
+.resetbtn:hover {
+  background-color: #a8d876;
 }

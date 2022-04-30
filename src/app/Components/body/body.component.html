@@ -17,22 +17,22 @@
 
   <div class="form">
     <form [formGroup]="Form" novalidate>
-      <h2>TITLE</h2>
-      <p>
+      <div class="formtitle">TITLE</div>
+      <div>
         <input required type="text" formControlName="First" />
-      </p>
+      </div>
 
-      <p>
+      <div>
         <input required type="text" formControlName="Second" />
-      </p>
+      </div>
 
-      <p>
+      <div>
         <input required type="text" formControlName="Third" />
-      </p>
+      </div>
 
-      <p>
+      <div>
         <input required type="text" formControlName="Last" />
-      </p>
+      </div>
 
       <div *ngIf="(Form.invalid && Form.touched) || Form.dirty">
         <h3 style="color: rgb(255, 4, 4)">All fields are required</h3>
