@@ -8,22 +8,20 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit {
-  Form!: FormGroup;
+
   nextpage: string = '';
-  constructor(private FormB: FormBuilder) {}
+  Form = this.fb.group({
+    First: ['', Validators.required],
+    Second: ['', Validators.required],
+    Third: ['', Validators.required],
+    Last: ['', Validators.required],
+  });
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.prepareForm();
     this.checkpage();
   }
-  prepareForm() {
-    this.Form = this.FormB.group({
-      First: ['', Validators.required],
-      Second: ['', Validators.required],
-      Third: ['', Validators.required],
-      Last: ['', Validators.required],
-    });
-  }
+
   checkpage() {
     if (document.URL.includes('two')) {
       this.nextpage = 'one';

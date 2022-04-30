@@ -1,17 +1,17 @@
 <div class="grid-container">
   <div class="menu">
     <div class="vertical-menu">
-      <a style="background-color: blue">Menu Item</a>
-      <a style="background-color: red">Menu Item</a>
-      <a style="background-color: blueviolet">Menu Item</a>
-      <a style="background-color: coral">Menu Item</a>
-      <a style="background-color: darkgreen">Menu Item</a>
-      <a style="background-color: deeppink">Menu Item</a>
-      <a style="background-color: gold">Menu Item</a>
-      <a style="background-color: paleturquoise"> Menu Item </a>
-      <a style="background-color: royalblue">Menu Item</a>
-      <a style="background-color: black">Menu Item</a>
-      <a style="background-color: green">Menu Item</a>
+      <a class="menuitem1">Menu Item</a>
+      <a class="menuitem2">Menu Item</a>
+      <a class="menuitem3">Menu Item</a>
+      <a class="menuitem4">Menu Item</a>
+      <a class="menuitem5">Menu Item</a>
+      <a class="menuitem6">Menu Item</a>
+      <a class="menuitem7">Menu Item</a>
+      <a class="menuitem8">Menu Item</a>
+      <a class="menuitem9">Menu Item</a>
+      <a class="menuitem10">Menu Item</a>
+      <a class="menuitem11">Menu Item</a>
     </div>
   </div>
 
@@ -19,33 +19,38 @@
     <form [formGroup]="Form" novalidate>
       <h2>TITLE</h2>
       <p>
-        <input type="text" formControlName="First" required />
+        <input required type="text" formControlName="First" />
       </p>
 
       <p>
-        <input type="text" formControlName="Second" required />
+        <input required type="text" formControlName="Second" />
       </p>
 
       <p>
-        <input type="text" formControlName="Third" required />
+        <input required type="text" formControlName="Third" />
       </p>
 
       <p>
-        <input type="text" formControlName="Last" required />
+        <input required type="text" formControlName="Last" />
       </p>
+
+      <div *ngIf="(Form.invalid && Form.touched) || Form.dirty">
+        <h3 style="color: rgb(255, 4, 4)">All fields are required</h3>
+      </div>
+
       <button
-        type="button"
-        formControlName="reset"
-        style="background-color: aqua"
+        class="resetbtn"
+        type="submit"
+        [disabled]="!Form.dirty"
         (click)="resetForm()"
       >
         RESET BUTTON
       </button>
 
       <button
-        type="button"
-        formControlName="submit"
-        style="background-color: aqua"
+        class="submitbtn"
+        type="submit"
+        [disabled]="!Form.valid"
         routerLink="/{{ nextpage }}"
       >
         SUBMIT BUTTON
@@ -53,5 +58,3 @@
     </form>
   </div>
 </div>
-
-<!--button that resets the form-->
