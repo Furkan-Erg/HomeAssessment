@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-body',
@@ -6,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit {
-  constructor() {}
+  Form!: FormGroup;
+  constructor(private FormB: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.prepareForm();
+  }
+  prepareForm() {
+    this.Form = this.FormB.group({
+      First: ['', Validators.required],
+      Second: ['', Validators.required],
+      Third: ['', Validators.required],
+      Last: ['', Validators.required],
+    });
+  }
 }

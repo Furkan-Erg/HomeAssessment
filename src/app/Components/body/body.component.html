@@ -1,34 +1,61 @@
 <div class="grid-container">
   <div class="menu">
     <div class="vertical-menu">
-      <a href="#" style="background-color: blue">Menu Item </a>
-      <a href="#" style="background-color: red">Menu Item </a>
-      <a href="#" style="background-color: blueviolet">Menu Item </a>
-      <a href="#" style="background-color: coral">Menu Item </a>
-      <a href="#" style="background-color: darkgreen">Menu Item </a>
-      <a href="#" style="background-color: deeppink">Menu Item </a>
-      <a href="#" style="background-color: gold">Menu Item </a>
-      <a href="#" style="background-color: paleturquoise">Menu Item </a>
-      <a href="#" style="background-color: royalblue">Menu Item </a>
-      <a href="#" style="background-color: black">Menu Item </a>
-      <a href="#" style="background-color: green">Menu Item </a>
+      <a style="background-color: blue">Menu Item</a>
+      <a style="background-color: red">Menu Item</a>
+      <a style="background-color: blueviolet">Menu Item</a>
+      <a style="background-color: coral">Menu Item</a>
+      <a style="background-color: darkgreen">Menu Item</a>
+      <a style="background-color: deeppink">Menu Item</a>
+      <a style="background-color: gold">Menu Item</a>
+      <a style="background-color: paleturquoise"> Menu Item </a>
+      <a style="background-color: royalblue">Menu Item</a>
+      <a style="background-color: black">Menu Item</a>
+      <a style="background-color: green">Menu Item</a>
     </div>
   </div>
 
   <div class="form">
-    <form>
-      <h1>Tıtle</h1>
-      <br />
-      <input type="text" value="TEXT FORM FILED" /><br />
-      <br />
-      <input type="text" value="TEXT FORM FILED" /><br />
-      <br />
-      <input type="text" value="TEXT FORM FILED" /><br />
-      <br />
-      <input type="text" value="TEXT FORM FILED" /><br /><br />
+    <form [formGroup]="Form" novalidate>
+      <h2>TITLE</h2>
+      <p>
+        <label for="First"> </label>
+        <input type="text" formControlName="First" />
+      </p>
 
-      <input type="submit" value="RESET BUTTON" />
-      <input type="submit" value="SUMBIT BUTTON" />
+      <p>
+        <label for="second"> </label>
+        <input type="text" formControlName="second" />
+      </p>
+
+      <p>
+        <label for="third"> </label>
+        <input type="text" formControlName="third" />
+      </p>
+
+      <p>
+        <label for="last"> </label>
+        <input type="text" formControlName="last" />
+      </p>
+
+      <button
+        type="submit"
+        formControlName="reset"
+        value="RESET BUTTON"
+        style="background-color: aqua"
+      >
+        RESET BUTTON
+      </button>
+
+      <button
+        type="button"
+        [disabled]="Form.invalid"
+        formControlName="submit"
+        value="SUBMIT BUTTON"
+        style="background-color: aqua"
+      >
+        SUBMIT BUTTON
+      </button>
     </form>
   </div>
 </div>
