@@ -32,6 +32,13 @@ export class BodyComponent implements OnInit {
   }
   resetForm() {
     this.Form.reset();
+    this.resetcolorbtn();
+    if (this.nextpage === 'two') {
+      this.resetcolorone();
+    }
+    if (this.nextpage === 'one') {
+      this.resetcolortwo();
+    }
   }
   //change color of footercomponent when user clicks on the button
 
@@ -63,5 +70,24 @@ export class BodyComponent implements OnInit {
     var resetbtn = document.getElementById('resetbtn');
     submitbtn!.style.backgroundColor = newColor;
     resetbtn!.style.backgroundColor = newColor;
+  }
+
+  resetcolortwo() {
+    var gfooterColor = document.getElementById('gfooter');
+    var gheaderColor = document.getElementById('gheader');
+    gfooterColor!.style.backgroundColor = '#56ca56';
+    gheaderColor!.style.backgroundColor = '#f3e993fa';
+  }
+  resetcolorone() {
+    var ffooterColor = document.getElementById('ffooter');
+    var fheaderColor = document.getElementById('fheader');
+    ffooterColor!.style.backgroundColor = '#56ca56';
+    fheaderColor!.style.backgroundColor = '#f3e993fa';
+  }
+  resetcolorbtn() {
+    var submitbtn = document.getElementById('submitbtn');
+    var resetbtn = document.getElementById('resetbtn');
+    submitbtn!.style.backgroundColor = '#4caf50';
+    resetbtn!.style.backgroundColor = '#4caf50';
   }
 }
