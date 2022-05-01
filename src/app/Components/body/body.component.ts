@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
-import { OneComponent } from 'src/app/one/one.component';
 
 @Component({
   selector: 'app-body',
@@ -37,7 +35,33 @@ export class BodyComponent implements OnInit {
   }
   //change color of footercomponent when user clicks on the button
 
-  changeColor(colorssss: string) {
-    
+  ChangeColor(newColor: string) {
+    this.changecolorbtn(newColor);
+    if (this.nextpage === 'two') {
+      this.changecolorone(newColor);
+    }
+    if (this.nextpage === 'one') {
+      this.changecolortwo(newColor);
+    }
+  }
+
+  changecolortwo(newColor: string) {
+    var gfooterColor = document.getElementById('gfooter');
+    var gheaderColor = document.getElementById('gheader');
+
+    gfooterColor!.style.backgroundColor = newColor;
+    gheaderColor!.style.backgroundColor = newColor;
+  }
+  changecolorone(newColor: string) {
+    var ffooterColor = document.getElementById('ffooter');
+    var fheaderColor = document.getElementById('fheader');
+    ffooterColor!.style.backgroundColor = newColor;
+    fheaderColor!.style.backgroundColor = newColor;
+  }
+  changecolorbtn(newColor: string) {
+    var submitbtn = document.getElementById('submitbtn');
+    var resetbtn = document.getElementById('resetbtn');
+    submitbtn!.style.backgroundColor = newColor;
+    resetbtn!.style.backgroundColor = newColor;
   }
 }

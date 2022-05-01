@@ -9,11 +9,4 @@ export class OneComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  changeColor_one(newColor: string) {
-    var footerColor = document.getElementById('ffooter');
-    var headerColor = document.getElementById('fheader');
-    footerColor!.style.backgroundColor = newColor;
-    headerColor!.style.backgroundColor = newColor;
-  }
 }

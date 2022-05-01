@@ -1,17 +1,17 @@
 <div class="grid-container">
   <div class="menu">
     <div class="vertical-menu">
-      <a class="menuitem1">Menu Item</a>
-      <a class="menuitem2">Menu Item</a>
-      <a class="menuitem3">Menu Item</a>
-      <a class="menuitem4">Menu Item</a>
-      <a class="menuitem5">Menu Item</a>
-      <a class="menuitem6">Menu Item</a>
-      <a class="menuitem7">Menu Item</a>
-      <a class="menuitem8">Menu Item</a>
-      <a class="menuitem9">Menu Item</a>
-      <a class="menuitem10">Menu Item</a>
-      <a class="menuitem11">Menu Item</a>
+      <a class="menuitem1" (click)="ChangeColor('blue')">Menu Item</a>
+      <a class="menuitem2" (click)="ChangeColor('red')">Menu Item</a>
+      <a class="menuitem3" (click)="ChangeColor('blueviolet')">Menu Item</a>
+      <a class="menuitem4" (click)="ChangeColor('coral')">Menu Item</a>
+      <a class="menuitem5" (click)="ChangeColor('darkgreen')">Menu Item</a>
+      <a class="menuitem6" (click)="ChangeColor('deeppink')">Menu Item</a>
+      <a class="menuitem7" (click)="ChangeColor('gold')">Menu Item</a>
+      <a class="menuitem8" (click)="ChangeColor('paleturquoise')">Menu Item</a>
+      <a class="menuitem9" (click)="ChangeColor('royalblue')">Menu Item</a>
+      <a class="menuitem10" (click)="ChangeColor('saddlebrown')">Menu Item</a>
+      <a class="menuitem11" (click)="ChangeColor('silver')">Menu Item</a>
     </div>
   </div>
 
@@ -39,6 +39,7 @@
       </div>
 
       <button
+        id="resetbtn"
         class="resetbtn"
         type="submit"
         [disabled]="!Form.dirty"
@@ -48,6 +49,7 @@
       </button>
 
       <button
+        id="submitbtn"
         class="submitbtn"
         type="submit"
         [disabled]="!Form.valid"
@@ -55,7 +57,6 @@
       >
         SUBMIT BUTTON
       </button>
-      <button (click)="changeColor('red')">Sasdasubmit</button>
     </form>
   </div>
 </div>

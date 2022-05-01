@@ -176,22 +176,24 @@ input {
   cursor: pointer;
 }
 .submitbtn:disabled {
-  background-color: #96af97;
+  opacity: 0.5;
   color: white;
   border: 2px solid black;
   cursor: not-allowed;
 }
 
 .resetbtn:disabled {
-  background-color: #96af97;
+  opacity: 0.5;
   color: white;
   border: 2px solid black;
   cursor: not-allowed;
 }
 
 .submitbtn:hover {
-  background-color: #a8d876;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.6);
 }
 .resetbtn:hover {
-  background-color: #a8d876;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.6);
 }
