@@ -35,10 +35,19 @@
   width: 98.7%;
   border: solid black 4px;
 }
-.fbody {
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  width: 100%;
-  height: 100%;
+
+@media screen and (max-width: 700px) {
+  .fheader {
+    width: 93.5%;
+  }
+  .fmain {
+    width: 100%;
+    height: 90vh;
+  }
+  .fsidebar {
+    width: 100%;
+  }
+  .ffooter {
+    width: 93.5%;
+  }
 }

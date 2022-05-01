@@ -18,9 +18,17 @@ export class BodyComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkpage();
+    this.checksize();
   }
   toggle = true;
   status = 'Enable';
+  mobile: boolean = false;
+  checksize() {
+    var size = document.body.offsetWidth;
+    if (size < 1024) {
+      this.mobile = true;
+    }
+  }
 
   checkpage() {
     if (document.URL.includes('two')) {

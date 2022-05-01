@@ -6,6 +6,7 @@ import { TwoComponent } from './two/two.component';
 const routes: Routes = [
   { path: 'one', component: OneComponent },
   { path: 'two', component: TwoComponent },
+  { path: '', redirectTo: '/two', pathMatch: 'full' },
 ];
 
 @NgModule({

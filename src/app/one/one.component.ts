@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OneComponent implements OnInit {
   constructor() {}
-
-  ngOnInit(): void {}
+  mobile: boolean = false;
+  ngOnInit(): void {
+    this.checksize();
+  }
+  checksize() {
+    var size = document.body.offsetWidth;
+    if (size < 1024) {
+      this.mobile = true;
+    }
+  }
 }

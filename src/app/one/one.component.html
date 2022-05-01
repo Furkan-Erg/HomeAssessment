@@ -2,7 +2,8 @@
   <div class="fmain" style="flex-grow: 9">
     <app-body></app-body>
   </div>
-  <div class="fsidebar" style="flex-grow: 1">
+
+  <div *ngIf="mobile === false" class="fsidebar" style="flex-grow: 1">
     <app-sidebar></app-sidebar>
   </div>
   <div class="fheader" id="fheader">

@@ -1,6 +1,6 @@
 <div class="grid-container">
   <div class="menu">
-    <div class="vertical-menu">
+    <div *ngIf="mobile === false" class="vertical-menu">
       <a class="menuitem1" (click)="ChangeColor('blue')">Menu Item</a>
       <a class="menuitem2" (click)="ChangeColor('red')">Menu Item</a>
       <a class="menuitem3" (click)="ChangeColor('blueviolet')">Menu Item</a>
