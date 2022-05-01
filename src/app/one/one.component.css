@@ -18,7 +18,7 @@
   padding-top: 8.8%;
   background-color: rgb(231, 166, 166);
   text-align: center;
-  
+  border: solid black 4px;
 }
 .fsidebar {
   background-color: rgba(163, 226, 245, 0.952);
