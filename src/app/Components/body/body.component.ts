@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { TwoComponent } from 'src/app/two/two.component';
+import { OneComponent } from 'src/app/one/one.component';
 
 @Component({
   selector: 'app-body',
@@ -36,5 +36,8 @@ export class BodyComponent implements OnInit {
     this.Form.reset();
   }
   //change color of footercomponent when user clicks on the button
-  changecolor(color: string) {}
+
+  changeColor(colorssss: string) {
+    
+  }
 }
